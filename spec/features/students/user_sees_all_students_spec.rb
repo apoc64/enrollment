@@ -32,7 +32,7 @@ describe 'user visits students index' do
 
     visit students_path
 
-      click_link student1.name
+    click_link student1.name
 
     expect(current_path).to eq(student_path(student1))
     expect(page).to_not have_content(student2.name)
