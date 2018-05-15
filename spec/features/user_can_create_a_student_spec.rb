@@ -6,8 +6,8 @@ describe 'user visits new student page' do
     visit new_student_path
 
     name = 'Nemo'
-    fill_in 'student[name]', with
-    click_on 'submit'
+    fill_in 'student[name]', with: name
+    click_button 'Create'
 
     expect(current_path).to eq(student_path(Student.last))
     expect(page).to have_content(name)
